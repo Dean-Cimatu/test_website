@@ -5,69 +5,525 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dean Cimatu - Computer Science Student</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">Dean Cimatu</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Interactive Business Card Container -->
+    <div class="business-card-container">
+        <!-- Card Content Container -->
+        <div class="card-content">
+            <!-- Home Tab - Main Business Card -->
+            <div class="tab-content active" id="home-tab">
+                <div class="business-card">
+                    <div class="card-background">
+                        <div class="floating-particles"></div>
+                    </div>
+                    
+                    <div class="card-header">
+                        <div class="profile-section">
+                            <div class="profile-picture">
+                                <div class="profile-ring"></div>
+                                                            <img src="assets/images/profile.jpg" alt="Dean Cimatu" class="profile-photo">
+                            </div>
+                            <div class="profile-info">
+                                <h1 class="name">Dean Cimatu</h1>
+                                <p class="title">Computer Science Student</p>
+                                <p class="university">Middlesex University London</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <main>
-        <div class="container">
-            <section id="profile" class="card">
-                <div class="profile-header">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <h1>Dean Cimatu</h1>
-                        <p class="title">Computer Science Student</p>
-                        <p class="subtitle">Middlesex University London</p>
-                        <a href="#contact" class="btn">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>I'm currently pursuing a Computer Science degree at Middlesex University London. I'm passionate about technology and enjoy learning about programming, software development, and emerging technologies.</p>
-                    <p>As a student, I'm constantly expanding my knowledge in areas such as programming languages, algorithms, data structures, and software engineering principles. I'm eager to apply what I learn in real-world projects and gain practical experience in the field.</p>
-                    <p>When I'm not studying, I enjoy working on personal coding projects and staying up-to-date with the latest developments in technology.</p>
-                </div>
-            </section>
+                    <div class="card-body">
+                        <div class="key-message">
+                            <h2 class="section-title">Computer Science Student</h2>
+                            <p>I'm currently pursuing a Computer Science degree at Middlesex University London. I'm passionate about technology and enjoy learning about programming, software development, and emerging technologies. When I'm not studying, I enjoy working on personal coding projects and staying up-to-date with the latest developments in technology.</p>
+                        </div>
 
-            <section id="contact" class="card">
-                <h2 class="card-title">Contact Information</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:deancimatu@gmail.com">Email Me!</a>
+                        <div class="quick-stats">
+                            <div class="stat-item" onclick="showTab('projects')">
+                                <div class="stat-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <span class="stat-number">Projects</span>
+                                    <span class="stat-label">Personal & Academic</span>
+                                </div>
+                            </div>
+                            <div class="stat-item" onclick="showTab('experience')">
+                                <div class="stat-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <span class="stat-number">Experience</span>
+                                    <span class="stat-label">Work & Leadership</span>
+                                </div>
+                            </div>
+                            <div class="stat-item" onclick="showTab('education')">
+                                <div class="stat-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="stat-text">
+                                    <span class="stat-number">Education</span>
+                                    <span class="stat-label">BSc Computer Science</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/dean-cimatu-3a14a5324/" target="_blank">My Linkedin</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/dean-cimatu" target="_blank">My Github</a>
+
+                    <div class="card-footer">
+                        <div class="social-links">
+                            <a href="mailto:deancimatu@gmail.com" class="social-link email-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/dean-cimatu" target="_blank" class="social-link linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/dean-cimatu" target="_blank" class="social-link github-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Projects Tab -->
+            <div class="tab-content" id="projects-tab">
+                <div class="content-panel">
+                    <div class="panel-header">
+                        <h2 class="section-title">Projects & Development</h2>
+                        <div class="navigation-buttons">
+                            <button class="nav-btn" onclick="showTab('home')" title="Home">
+                                <i class="fas fa-home"></i>
+                            </button>
+                            <button class="nav-btn current" title="Projects">
+                                <i class="fas fa-laptop-code"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('experience')" title="Experience">
+                                <i class="fas fa-briefcase"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('education')" title="Education">
+                                <i class="fas fa-graduation-cap"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Phaser 3 Game Development</h3>
+                                    <span class="project-date">September 2025</span>
+                                </div>
+                                <div class="project-status completed">
+                                    <span class="status-dot"></span>
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Developed an interactive game using Phaser 3 framework, implementing game mechanics, physics systems, and user interactions with focus on performance optimization.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag primary project-coding">JavaScript</span>
+                                    <span class="tech-tag primary project-coding">Phaser 3</span>
+                                    <span class="tech-tag outlined-skill">Game Design</span>
+                                    <span class="tech-tag outlined-skill">Physics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Study Timer Social App</h3>
+                                    <span class="project-date">August 2025 - Present</span>
+                                </div>
+                                <div class="project-status in-progress">
+                                    <span class="status-dot"></span>
+                                    In Development
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Developing a social app that utilizes study timers to help present data and motivate users to study more. Users can share tabulated hours with other users using modern web stacks and app development.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag primary project-coding">React</span>
+                                    <span class="tech-tag primary project-coding">Node.js</span>
+                                    <span class="tech-tag primary project-coding">MongoDB</span>
+                                    <span class="tech-tag primary project-coding">Express.js</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-fist-raised"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Platform Fighter Game</h3>
+                                    <span class="project-date">June 2025 - Present</span>
+                                </div>
+                                <div class="project-status in-progress">
+                                    <span class="status-dot"></span>
+                                    In Development
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Developing a platform fighter game using Godot engine, focusing on character mechanics, competitive gameplay, and smooth combat systems with multiplayer support.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag primary project-coding">Godot</span>
+                                    <span class="tech-tag primary project-coding">GDScript</span>
+                                    <span class="tech-tag outlined-skill">Game Design</span>
+                                    <span class="tech-tag outlined-skill">Multiplayer</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Home Server Infrastructure</h3>
+                                    <span class="project-date">March 2025 - Present</span>
+                                </div>
+                                <div class="project-status active">
+                                    <span class="status-dot"></span>
+                                    Ongoing
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Utilizing homegrown server to host services such as Kimmich and implementing secure tunnel solutions to access services remotely with proper security measures.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag primary project-coding">Linux</span>
+                                    <span class="tech-tag outlined-skill">Server Management</span>
+                                    <span class="tech-tag outlined-skill">Networking</span>
+                                    <span class="tech-tag primary project-coding">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-summary">
+                        <h3 class="section-subtitle">Development Focus Areas</h3>
+                        <div class="focus-areas-grid">
+                            <div class="focus-area-card">
+                                <div class="focus-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="focus-content">
+                                    <h4 class="focus-title">Full-Stack Development</h4>
+                                    <p>Specializing in modern web technologies with focus on MERN stack and responsive design principles</p>
+                                </div>
+                            </div>
+                            <div class="focus-area-card">
+                                <div class="focus-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="focus-content">
+                                    <h4 class="focus-title">Game Development</h4>
+                                    <p>Creating interactive games with Godot and Phaser, focusing on mechanics and user experience</p>
+                                </div>
+                            </div>
+                            <div class="focus-area-card">
+                                <div class="focus-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="focus-content">
+                                    <h4 class="focus-title">Infrastructure & DevOps</h4>
+                                    <p>Building and managing server infrastructure with security and performance optimization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Tab -->
+            <div class="tab-content" id="experience-tab">
+                <div class="content-panel">
+                    <div class="panel-header">
+                        <h2 class="section-title">Work Experience & Leadership</h2>
+                        <div class="navigation-buttons">
+                            <button class="nav-btn" onclick="showTab('home')" title="Home">
+                                <i class="fas fa-home"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('projects')" title="Projects">
+                                <i class="fas fa-laptop-code"></i>
+                            </button>
+                            <button class="nav-btn current" title="Experience">
+                                <i class="fas fa-briefcase"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('education')" title="Education">
+                                <i class="fas fa-graduation-cap"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-grid">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="experience-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="experience-info">
+                                    <h3 class="job-title">BSc Course Ambassador</h3>
+                                    <span class="experience-period">September 2025 - Present</span>
+                                    <span class="experience-company">Middlesex University</span>
+                                </div>
+                            </div>
+                            <div class="experience-details">
+                                <ul>
+                                    <li>Collaborating with other Course Ambassadors to bring a fun and informative essence to University Open Days</li>
+                                    <li>Contacting and informing prospective students through online platforms</li>
+                                    <li>Creating content and experiences to showcase and bring attention to events happening on campus</li>
+                                </ul>
+                            </div>
+                            <div class="skills-used">
+                                <span class="skill-tag outlined-skill">Communication</span>
+                                <span class="skill-tag outlined-skill">Content Creation</span>
+                                <span class="skill-tag outlined-skill">Event Management</span>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="experience-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="experience-info">
+                                    <h3 class="job-title">President of Computer Science Academic Society</h3>
+                                    <span class="experience-period">September 2025 - Present</span>
+                                    <span class="experience-company">Middlesex University</span>
+                                </div>
+                            </div>
+                            <div class="experience-details">
+                                <ul>
+                                    <li>Planning activities and workshops to help aid students who require extra help</li>
+                                    <li>Promoting competitions aligned to the degree and creating a space for members to find cohorts with similar interests</li>
+                                    <li>Aiding in breaking down social barriers between students in different blocks</li>
+                                </ul>
+                            </div>
+                            <div class="skills-used">
+                                <span class="skill-tag outlined-skill">Leadership</span>
+                                <span class="skill-tag outlined-skill">Event Planning</span>
+                                <span class="skill-tag outlined-skill">Community Building</span>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="experience-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="experience-info">
+                                    <h3 class="job-title">Student Group Leader</h3>
+                                    <span class="experience-period">September 2025 - Present</span>
+                                    <span class="experience-company">CSA Society Representative</span>
+                                </div>
+                            </div>
+                            <div class="experience-details">
+                                <ul>
+                                    <li>Representing the CSA Society to work alongside other Student Leaders</li>
+                                    <li>Bringing funding and engagement to student-led events</li>
+                                    <li>Coordinating cross-society initiatives and collaborations</li>
+                                </ul>
+                            </div>
+                            <div class="skills-used">
+                                <span class="skill-tag outlined-skill">Project Management</span>
+                                <span class="skill-tag outlined-skill">Fundraising</span>
+                                <span class="skill-tag outlined-skill">Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="extra-curriculars">
+                        <h3 class="extracurricular-title">Extra-Curricular Activities</h3>
+                        <div class="activities-grid">
+                            <div class="activity-card">
+                                <div class="activity-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4 class="extracurricular-item">Formula Student Society</h4>
+                                    <p>Member</p>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4 class="extracurricular-item">Mechatronics Society</h4>
+                                    <p>Member</p>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4 class="extracurricular-item">Professional Certifications</h4>
+                                    <p>Pursuing AWS, Google Data Engineer, MS Azure AI, CompTIA+ Data+</p>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4 class="extracurricular-item">Online Learning</h4>
+                                    <p>Udemy, W3Schools, Coursera courses on Python, C, C++, TypeScript, Angular, AI/ML</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Tab -->
+            <div class="tab-content" id="education-tab">
+                <div class="content-panel">
+                    <div class="panel-header">
+                        <h2 class="section-title">Education & Skills</h2>
+                        <div class="navigation-buttons">
+                            <button class="nav-btn" onclick="showTab('home')" title="Home">
+                                <i class="fas fa-home"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('projects')" title="Projects">
+                                <i class="fas fa-laptop-code"></i>
+                            </button>
+                            <button class="nav-btn" onclick="showTab('experience')" title="Experience">
+                                <i class="fas fa-briefcase"></i>
+                            </button>
+                            <button class="nav-btn current" title="Education">
+                                <i class="fas fa-graduation-cap"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="education-section">
+                        <div class="education-card">
+                            <div class="education-header">
+                                <div class="education-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="education-info">
+                                    <h3 class="education-title">BSc Computer Science (Hons)</h3>
+                                    <span class="education-period">January 2025 - July 2027</span>
+                                    <span class="education-institution">Middlesex University</span>
+                                </div>
+                            </div>
+                            <div class="education-modules">
+                                <h4>Notable Modules:</h4>
+                                <ul>
+                                    <li>Systems Architecture and Operating Systems</li>
+                                    <li>Object-Oriented Programming</li>
+                                    <li>Web Applications and Databases</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <div class="skills-category">
+                            <h3 class="technical-title">Technical Skills</h3>
+                            <div class="skills-subcategory">
+                                <h4>Web Stack Technologies</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag coding-skill">HTML</span>
+                                    <span class="skill-tag coding-skill">CSS</span>
+                                    <span class="skill-tag coding-skill">JavaScript</span>
+                                    <span class="skill-tag coding-skill">MongoDB</span>
+                                    <span class="skill-tag coding-skill">Express.js</span>
+                                    <span class="skill-tag coding-skill">React</span>
+                                    <span class="skill-tag coding-skill">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="skills-subcategory">
+                                <h4>Programming Languages</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag coding-skill">Java</span>
+                                    <span class="skill-tag coding-skill">Python</span>
+                                    <span class="skill-tag coding-skill">Arduino</span>
+                                    <span class="skill-tag coding-skill">C#</span>
+                                    <span class="skill-tag coding-skill">GDScript</span>
+                                    <span class="skill-tag coding-skill">Lua</span>
+                                </div>
+                            </div>
+                            <div class="skills-subcategory">
+                                <h4>Technical Proficiencies</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag coding-skill">GitHub</span>
+                                    <span class="skill-tag coding-skill">Bash</span>
+                                    <span class="skill-tag outlined-skill">Circuit Design</span>
+                                    <span class="skill-tag outlined-skill">Networking</span>
+                                    <span class="skill-tag outlined-skill">Server Management</span>
+                                    <span class="skill-tag outlined-skill">UX Design</span>
+                                    <span class="skill-tag outlined-skill">Game Design</span>
+                                    <span class="skill-tag outlined-skill">MS Office</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="key-skills">
+                            <h3 class="practical-title">Key Skills</h3>
+                            <div class="key-skills-grid">
+                                <div class="key-skill-card practical-skill">
+                                    <div class="key-skill-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <div class="key-skill-content">
+                                        <h4>Project Management</h4>
+                                        <p>Building and implementing plans to segment features and frameworks to streamline the development process</p>
+                                    </div>
+                                </div>
+                                <div class="key-skill-card practical-skill">
+                                    <div class="key-skill-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="key-skill-content">
+                                        <h4>Data Analysis</h4>
+                                        <p>Analyzing key facts and details to help optimize workflows and build intuitive methods to solve problems</p>
+                                    </div>
+                                </div>
+                                <div class="key-skill-card practical-skill">
+                                    <div class="key-skill-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <div class="key-skill-content">
+                                        <h4>Communication</h4>
+                                        <p>Creating well-documented reports and intuitive presentation aids for project showcasing</p>
+                                    </div>
+                                </div>
+                                <div class="key-skill-card practical-skill">
+                                    <div class="key-skill-icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="key-skill-content">
+                                        <h4>Teamwork</h4>
+                                        <p>Collaborating with diverse people to create, work on, and manage projects for coursework and university activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Dean Cimatu. Computer Science Student at Middlesex University London.</p>
-        </div>
-    </footer>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
